@@ -39,21 +39,21 @@ public class MongoApp1Application implements CommandLineRunner {
 
 		System.out.println("\n-----------GET ITEMS BY CATEGORY---------------------------------\n");
 
-//		getItemsByCategory("millets");
+		getItemsByCategory("millets");
 //
-//		System.out.println("\n-----------UPDATE CATEGORY NAME OF SNACKS CATEGORY----------------\n");
+		System.out.println("\n-----------UPDATE CATEGORY NAME OF SNACKS CATEGORY----------------\n");
 //
-//		updateCategoryName("snacks");
+		updateCategoryName("snacks");
 //
-//		System.out.println("\n----------DELETE A GROCERY ITEM----------------------------------\n");
-//
-//		deleteGroceryItem("Kodo Millet");
-//
-//		System.out.println("\n------------FINAL COUNT OF GROCERY ITEMS-------------------------\n");
-//
-//		findCountOfGroceryItems();
-//
-//		System.out.println("\n-------------------THANK YOU---------------------------");
+		System.out.println("\n----------DELETE A GROCERY ITEM----------------------------------\n");
+
+		deleteGroceryItem("Kodo Millet");
+
+		System.out.println("\n------------FINAL COUNT OF GROCERY ITEMS-------------------------\n");
+
+		findCountOfGroceryItems();
+
+		System.out.println("\n-------------------THANK YOU---------------------------");
 
 	}
 	void createGroceryItems() {
