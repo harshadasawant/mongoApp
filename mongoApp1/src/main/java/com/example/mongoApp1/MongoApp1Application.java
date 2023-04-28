@@ -25,35 +25,35 @@ public class MongoApp1Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("-------------CREATE GROCERY ITEMS-------------------------------\n");
-
-		createGroceryItems();
-
-		System.out.println("\n----------------SHOW ALL GROCERY ITEMS---------------------------\n");
-
-		showAllGroceryItems();
-
-		System.out.println("\n--------------GET ITEM BY NAME-----------------------------------\n");
-
-		getGroceryItemByName("Whole Wheat Biscuit");
-
-		System.out.println("\n-----------GET ITEMS BY CATEGORY---------------------------------\n");
-
-		getItemsByCategory("millets");
+//		System.out.println("-------------CREATE GROCERY ITEMS-------------------------------\n");
 //
-		System.out.println("\n-----------UPDATE CATEGORY NAME OF SNACKS CATEGORY----------------\n");
+//		createGroceryItems();
 //
-		updateCategoryName("snacks");
+//		System.out.println("\n----------------SHOW ALL GROCERY ITEMS---------------------------\n");
 //
-		System.out.println("\n----------DELETE A GROCERY ITEM----------------------------------\n");
+//		showAllGroceryItems();
+//
+//		System.out.println("\n--------------GET ITEM BY NAME-----------------------------------\n");
+//
+//		getGroceryItemByName("Whole Wheat Biscuit");
+//
+//		System.out.println("\n-----------GET ITEMS BY CATEGORY---------------------------------\n");
+//
+//		getItemsByCategory("millets");
+////
+//		System.out.println("\n-----------UPDATE CATEGORY NAME OF SNACKS CATEGORY----------------\n");
+////
+//		updateCategoryName("snacks");
+////
+//		System.out.println("\n----------DELETE A GROCERY ITEM----------------------------------\n");
+//
+//		deleteGroceryItem("Kodo Millet");
+//
+//		System.out.println("\n------------FINAL COUNT OF GROCERY ITEMS-------------------------\n");
+//
+//		findCountOfGroceryItems();
 
-		deleteGroceryItem("Kodo Millet");
-
-		System.out.println("\n------------FINAL COUNT OF GROCERY ITEMS-------------------------\n");
-
-		findCountOfGroceryItems();
-
-		System.out.println("\n-------------------THANK YOU---------------------------");
+//		System.out.println("\n-------------------THANK YOU---------------------------");
 
 	}
 	void createGroceryItems() {
@@ -79,7 +79,7 @@ public class MongoApp1Application implements CommandLineRunner {
 
 	// 3. Get name and quantity of a all items of a particular category
 	public void getItemsByCategory(String category) {
-		System.out.println("Getting items for the category " + category);
+		System.out.println("Gettin																				g items for the category " + category);
 		List<GroceryItem> list = groceryItemRepo.findAll(category);
 
 		list.forEach(item -> System.out.println("Name: " + item.getName() + ", Quantity: " + item.getQuantity()));
