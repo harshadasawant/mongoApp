@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @EnableMongoRepositories(basePackages = "com.example.mongoApp1.repository")
 @ComponentScan(basePackages = "com.example.mongoApp1")
 @SpringBootApplication
+@EnableDiscoveryClient
 public class MongoApp1Application implements CommandLineRunner {
 
 	@Autowired
