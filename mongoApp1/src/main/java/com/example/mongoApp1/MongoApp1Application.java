@@ -2,6 +2,8 @@ package com.example.mongoApp1;
 
 import com.example.mongoApp1.documents.GroceryItem;
 import com.example.mongoApp1.repository.ItemRepository;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,6 +18,13 @@ import java.util.List;
 @ComponentScan(basePackages = "com.example.mongoApp1")
 @SpringBootApplication
 @EnableDiscoveryClient
+@OpenAPIDefinition(
+		info = @Info(
+				title = "MangoDB App",
+				version="1.0.0",
+				description="This is example of MongoDB Application"
+		)
+)
 public class MongoApp1Application implements CommandLineRunner {
 
 	@Autowired
@@ -81,7 +90,7 @@ public class MongoApp1Application implements CommandLineRunner {
 
 	// 3. Get name and quantity of a all items of a particular category
 	public void getItemsByCategory(String category) {
-		System.out.println("Gettin																				g items for the category " + category);
+		System.out.println("Getting items for the category " + category);
 		List<GroceryItem> list = groceryItemRepo.findAll(category);
 
 		list.forEach(item -> System.out.println("Name: " + item.getName() + ", Quantity: " + item.getQuantity()));
